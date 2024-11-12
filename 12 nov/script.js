@@ -2,9 +2,12 @@
 // var ,let ,const (three way to define variables)
 
 var name ="sandip rajput";
-console.log (typeof name);
+console.log (typeof( name));
+console.log(name);
 var age = 24;
+console.log (typeof( age));
 var isEligible= true;
+console.log (typeof( isEligible));
 var data =null;
 var firstName;
 
