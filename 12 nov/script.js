@@ -2,6 +2,7 @@
 // var ,let ,const (three way to define variables)
 
 var name ="sandip rajput";
+document.write(name);
 console.log (typeof( name));
 console.log(name);
 var age = 24;
