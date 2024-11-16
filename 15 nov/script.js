@@ -14,14 +14,14 @@
 // btn.style.fontSize="20px";
 // btn.style.backgroundColor="gray";
 // btn.style.boxShadow="10px 20px 30px gray";
-var h1=document.getElementById("demo");
+// var h1=document.getElementById("demo");
 // h1.innerHTML=" Do You Work Everyday";
 
-var name="John Doe";
-var age=34;
+// var name="John Doe";
+// var age=34;
 // concatination
-console.log(name + " " + age);
-h1.innerHTML=name + " " + age;
+// console.log(name + " " + age);
+// h1.innerHTML=name + " " + age;
 
 // to get value from ser
 
@@ -36,5 +36,27 @@ h1.innerHTML=name + " " + age;
 
 // get 
 
- var  Myimage= document.getElementById("Myimage");
- Myimage.src="1.img" ;
+//  var  Myimage= document.getElementById("Myimage");
+//  Myimage.src="1.img" ;
+var h1=document.getElementById("demo");
+
+var username=prompt("Enter your name");
+var userage=prompt("Enter your age");
+h1.innerHTML=username+ " "+userage;
+
+var txtcolor=prompt("Enter your color");
+var bgcolor=prompt("Enter your background color");
+var border=prompt("Enter border color");
+var redius=prompt("Enter border Radius");
+var shadow=prompt("Enter text shadow");     
+var fontSize=prompt("Enter font size");
+var height=prompt("Enter height");
+var textAlign=prompt("Enter your text align");
+
+h1.style.color=txtcolor;
+h1.style.backgroundColor=bgcolor;
+h1.style.border=border;
+h1.style.borderRadius=redius;
+h1.style.textShadow=shadow;
+h1.style.fontSize=fontSize;
+h1.style.textAlign=textAlign;
