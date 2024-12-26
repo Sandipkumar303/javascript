@@ -50,21 +50,20 @@
 // document.getElementById("demo").innerHTML= text1;
 
 
- function printPattern()
+ function printPattern(rows)
 {
-    let txt="";
-    for(let i=1; i<=5; i++)
-        for( let j=1; j<=5; j++)
-    
+    for(let i=1; i<=rows; i++)
     {
+        let stars="";
+        for(let j=1; j<=i; j++)
         {
-           
-            txt+=`*`;
+            stars+="*";
         }
-        txt+=`<br>`;
+    console.log(stars);
     }
-    document.getElementById("demo").innerHTML=txt;
+    
+
         
 }
 
-printPattern();
+printPattern(7);
