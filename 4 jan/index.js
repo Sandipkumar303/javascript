@@ -11,7 +11,7 @@ async function fet() {
     <td>${e.age}</td>
     <td>${e.contact}</td>
     <td>${e.city}</td>
-    <td> <button onclick="mydelete(`${e.id}`)">Delete</button></td>
+    <td> <button onclick="mydelete(${e.id})">Delete</button></td>
 
     </tr>
     `
@@ -28,4 +28,24 @@ function mydelete(id){
         method:`DELETE`
     })
     .then(R=>alert("Deleted...!!!"))
+}
+function insert_data()
+{
+    let data=
+    {
+        name:document.querySelector('#input1').value,
+        age:document.querySelector('#input2').value,
+        city:document.querySelector('#input3').value,
+        contact:document.querySelector('#input4').value
+    }
+    fetch("http://localhost:3000/emp",
+        {
+            method:'POST',
+            headers:
+            {
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify(data)
+        }
+    ).then(r=>alert("Data Inserted"))
 }
