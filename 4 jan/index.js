@@ -11,7 +11,9 @@ async function fet() {
     <td>${e.age}</td>
     <td>${e.contact}</td>
     <td>${e.city}</td>
-    <td> <button onclick="mydelete(${e.id})">Delete</button></td>
+    <td> <button onclick="mydelete('${e.id}')">Delete</button></td>
+    <td> <button onclick="edit('${e.id}')">Edit</button></td>
+
 
     </tr>
     `
@@ -48,4 +50,21 @@ function insert_data()
             body:JSON.stringify(data)
         }
     ).then(r=>alert("Data Inserted"))
+}
+
+ async function edit(id)
+{
+ let res= await fetch(`http://localhost:3000/emp/${id}`)
+ let data=await res.json()
+  console.log(data);
+  
+ let edit_frm=`
+ <input type="text" value="${data.id}" readonly><br><br>
+ <input type="text" value="${data.name}" ><br><br>
+ <input type="text" value="${data.age}" ><br><br>
+ <input type="text" value="${data.city}" ><br><br>
+ <input type="text" value="${data.contact}" ><br><br>
+ <input type="submit" >
+ `
+ document.querySelector('#editform').innerHTML=edit_frm
 }
